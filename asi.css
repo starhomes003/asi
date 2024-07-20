@@ -1,0 +1,528 @@
+@font-face {
+    font-family: 'FavoritPro-Book';
+    src: url('FavoritPro-Regular.ttf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'FavoritPro-Book', sans-serif;
+}
+
+
+ body, html {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+	overflow-x: hidden;
+}
+        
+	/*! CSS Used from: Embedded */
+:root {
+  --colour-white: #FFFFFF;
+  --colour-black: #151A1A;
+  --colour-grey: rgba(255, 255, 255, 0.30);
+  --colour-lime: #B1FCAB;
+  --font-default: Favorit Pro Regular;
+  --font-mono: Decima Mono;
+  --font-book: Favorit Pro Book;
+  --transition-speed-default: 300ms;
+  --transition-speed-fast: 200ms;
+  --transition-speed-extra-fast: 100ms;
+  --transition-speed-slow: 500ms;
+  --transition-speed-extra-slow: 800ms;
+  --transition-ease: cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  border: none;
+  list-style: none;
+  background: none;
+  outline: none;
+  border-radius: 0px;
+  box-shadow: none;
+}
+
+::selection {
+  background-color: var(--colour-black);
+  color: var(--colour-lime);
+}
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+	
+}
+
+body {
+    overflow-y: scroll; /* Ensure the browser's scrollbar is always visible */
+    padding: 20px 20px; /* Adjust this to the height of your header */
+}
+
+header {
+    position: sticky;
+    top: 0;
+    /*width: 100%;*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    transition: padding 0.3s ease, transform 0.3s ease;
+    z-index: 1000;
+}
+
+header.scrolled {
+    padding: 10px;
+    transform: scale(0.85);
+}
+
+.logo {
+    height: 65px;
+	margin-left:10px;
+	background-color: #ffffff30;
+}
+
+.styled-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    background-color: #b2f7b2;
+    color: black;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 13px;
+    /*font-weight: bold;*/
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.styled-button:hover {
+    background-color: black;
+    color: white;
+}
+
+.styled-button:after {
+    content: ' ↗';
+    margin-left: 5px;
+}
+
+.token-migration-guide {
+    padding: 40px;
+    background-color: #b2f7b2; /* Slightly different green for contrast */
+    border-radius: 15px;
+    max-width: 800px;
+    margin: 20px auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.token-migration-guide h1 {
+    text-align: center;
+    color: #1b5e20;
+}
+
+.token-migration-guide h2 {
+    color: #004d40;
+    margin-top: 20px;
+}
+
+.token-migration-guide ul {
+    list-style-type: disc;
+    margin: 20px;
+    padding-left: 40px;
+}
+
+.token-migration-guide p {
+    margin: 20px 0;
+}
+
+.token-migration-guide hr {
+    border: none;
+    border-top: 1px solid #004d40;
+    margin: 40px 0;
+}
+
+.token-migration-guide .buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.partnership-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.partnership-info {
+    display: flex;
+    align-items: center;
+}
+
+.partnership-info span {
+    margin-right: 20px;
+    font-size: 18px;
+    color: #333;
+}
+
+.partner-logo {
+    margin: 0 10px;
+    height: 40px;
+}
+
+img.partner-logo {
+    width: 120px;
+    margin-right: 10px;
+    height: 45px;
+}
+
+
+
+.about-alliance {
+    padding: 50px 20px;
+    text-align: center;    
+	max-width: 70vw;
+    margin: 0 auto;
+	background-color:#ffffff40;
+	border-radius:20px;
+}
+
+.about-alliance h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.about-alliance p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 50px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.alliance-members {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.member {
+    border-radius: 15px;
+    width: 30%;
+    margin: 10px;
+    padding: 20px;
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.member:hover {
+    transform: translateY(-10px);
+}
+
+.member img {
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+}
+
+.member h2 {
+    font-size: 24px;
+    color: #333;
+    margin-top: 15px;
+}
+
+.member p {
+    font-size: 12px;
+    color: #555;
+    margin: 15px 0;
+}
+
+.learn-more {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #b2f7b2;
+    color: black;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.learn-more:hover {
+    background-color: black;
+    color: white;
+}
+
+.learn-more:after {
+    content: ' ↗';
+    margin-left: 5px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.profile {
+    /*background: white;*/
+    padding: 20px;
+    border-radius: 8px;
+    /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);*/
+    text-align: left;
+}
+
+.profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 5%;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 10px;
+	margin: 0 auto 10px;
+}
+
+.profile h2 {
+    margin: 0 0 10px;
+    font-size: 1.5em;
+}
+
+.profile h3 {
+    margin: 0 0 15px;
+    font-size: 1em;
+    color: #555;
+    line-height: 1.4;
+}
+
+.profile p {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.buttons {
+    margin-top: 15px;
+}
+
+.buttons button {
+    background-color: #00c2cb;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px 0;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 0.9em;
+}
+
+.buttons button:hover {
+    background-color: #009ea3;
+}
+
+.resources {
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.resources h2 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+.resources .buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.resources .buttons button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 0.9em;
+}
+
+.resources .buttons button:hover {
+    background-color: #218838;
+}   </style>
+
+
+
+    <style>
+       header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            
+        }
+        
+        .right-container {
+            display: flex;
+            align-items: center;
+			margin-top:-45px;
+        }
+        .styled-button{
+			margin-right:25px;
+		}
+        .right-container img {
+            height: 50px; /* Adjust as needed */
+        }
+		
+		header a img:hover {
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
+}
+  
+.background-video {
+		position: fixed;
+		top: -12px;
+		left: 0;
+		width: 100%;
+		height: 102%;
+		z-index: -1;
+	}
+	/* Desktop */
+@media (min-width: 768px) {
+	.background-video {
+		object-fit: fill;
+	}
+	.content {
+	position: relative;
+	z-index: 1;
+	color: black;
+	padding: 20px;
+	height: 50vh; /* Increase the height to allow scrolling */
+	margin-top: 25vh;
+    margin-bottom: 3vh;
+    font-size: 4.5rem;
+    /* font-weight: bold; */
+}
+
+.bottom{
+	margin-bottom:12px;
+}
+ 
+	.only-mobile{
+		display:none;
+	}
+	
+	.only-desktop{
+		display:flex;
+	}
+	
+}
+
+
+
+/* Mobile */
+@media (max-width: 767px) {
+	header {
+		padding: 10px;
+    }
+	.right-container {
+    display: flex;
+    align-items: center;
+    margin-top: 0px;
+}
+
+body {
+    overflow-y: scroll; /* Ensure the browser's scrollbar is always visible */
+    padding: 20px 5px; /* Adjust this to the height of your header */
+}
+
+.right-container img {
+    height: 35px;
+}
+	.bottom{
+	margin-bottom:0px;
+}
+	
+	
+	.styled-button {
+		padding: 10px 10px;
+		
+	}
+	.only-desktop{
+		display:none;
+	}
+	
+	.only-mobile{
+		display:flex;
+	}
+	
+	.background-video {
+		object-fit: cover;
+	}
+	
+	.logo {
+		height: 40px;
+		margin-left: 10px;
+	}
+	
+	.styled-button{
+		font-size: 0.7rem;
+        
+	}
+	
+	.content {
+        position: relative;
+        z-index: 1;
+        color: black;
+        padding: 20px;
+        height: 50vh;
+        margin-top: 15vh;
+        /*margin-bottom: 4vh;*/
+        font-size: 2.5rem;
+        /* font-weight: bold; */
+    }
+	
+	.partnership-info {
+		display: block;
+		align-items: center;
+	}
+	
+	.mobile-partners{
+		display:flex;
+		font-size: 0.75rem;
+        margin-bottom: 10px;
+	}
+	
+	.mobile-partnership{
+		display: inline-block;
+		font-size: 0.75rem;
+        margin-bottom: 10px;
+		
+	}
+	img.partner-logo {
+		width: 20%;
+		margin-right: 5px;
+		height: auto;
+}
+}
+
+h1, p {
+	margin: 20px 0;
+}
